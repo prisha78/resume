@@ -1,0 +1,356 @@
+:root {
+    --ivory: #F9F5F0;
+    --cocoa: #3A2D28;
+    --caramel: #D4A373;
+    --espresso: #2A1A1F;
+    --velvet: #5E3023;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--espresso);
+    background-color: var(--ivory);
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+/* Landing Experience */
+.hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.hair-strand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 150vh;
+    background: linear-gradient(to bottom, transparent, var(--caramel), var(--caramel));
+    z-index: 1;
+}
+
+.hero-content {
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: var(--cocoa);
+    line-height: 1.1;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    color: var(--velvet);
+    font-style: italic;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background-color: var(--cocoa);
+    color: white;
+    text-decoration: none;
+    border-radius: 0;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border: 2px solid var(--cocoa);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: var(--cocoa);
+}
+
+/* Credibility Block */
+.credibility {
+    padding: 8rem 2rem;
+    background-color: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--cocoa);
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+    color: var(--velvet);
+}
+
+.screenshot-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 4rem; /*HAVE CHANGED FROM 4 TO 1*/
+}
+
+.screenshot {
+    width: 40%;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.screenshot:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+}
+
+.screenshot img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.rebel-link {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 2px;
+    transition: all 0.3s ease;
+    display: inline-block; /* Required for proper border alignment */
+    margin: 0 auto; /* Centers the inline-block element */
+}
+
+/* Container to center the link */
+.link-container {
+    text-align: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.rebel-link:hover {
+    color: #555;
+    border-bottom-color: #555;
+}
+
+/* Immersive Storytelling */
+.storytelling {
+    padding: 10rem 0;
+    background-color: var(--velvet);
+    color: white;
+}
+
+.story-block {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.story-block + .story-block {
+    margin-top: 8rem;
+}
+
+.story-block h3 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 1.5rem;
+    color: var(--caramel);
+}
+
+.story-block h2 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+
+.story-block p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.story-gallery {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 2rem 0;
+    scroll-snap-type: x mandatory;
+}
+
+.story-gallery::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery-item {
+    scroll-snap-align: start;
+    min-width: 80%;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+/* Final CTA */
+.final-cta {
+    padding: 10rem 2rem;
+    text-align: center;
+    background-color: var(--ivory);
+}
+
+.final-cta h2 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    color: var(--cocoa);
+}
+
+.final-cta p {
+    font-size: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    color: var(--velvet);
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.modal:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 3rem;
+    max-width: 500px;
+    width: 90%;
+    border-radius: 2px;
+    position: relative;
+}
+
+.modal h3 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: var(--cocoa);
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input, 
+.form-group textarea, 
+.form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.form-group textarea {
+    min-height: 120px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    color: var(--cocoa);
+    font-size: 1.8rem;
+    text-decoration: none;
+    line-height: 1;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
+    }
+    
+    .section-subtitle {
+        font-size: 2.5rem;
+    }
+    
+    .screenshot-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .screenshot {
+        width: 80%;
+        margin-bottom: 2rem;
+    }
+    
+    .story-block h2 {
+        font-size: 2rem;
+    }
+    
+    .final-cta h2 {
+        font-size: 2.5rem;
+    }
+
+    
+
+   
+    }
